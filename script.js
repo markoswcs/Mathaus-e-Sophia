@@ -88,7 +88,7 @@ musicPlayer.addEventListener('click', () => {
 });
 
 /* ═══════════ LIVE COUNTER ═══════════ */
-const startDate = new Date(2022, 11, 1); // Dec 1, 2022
+const startDate = new Date(2025, 11, 22); // Dec 22, 2025
 
 function startLiveCounter() {
   updateCounter();
@@ -122,8 +122,8 @@ function updateCounter() {
   // Update numbers section days count
   const totalDays = Math.floor((now - startDate) / 86400000);
   const totalMonths = years * 12 + months;
-  const dayTarget = $('[data-target="1284"]');
-  const monthTarget = $('[data-target="42"]');
+  const dayTarget = $('[data-target="169"]');
+  const monthTarget = $('[data-target="5"]');
   if (dayTarget) dayTarget.setAttribute('data-target', totalDays);
   if (monthTarget) monthTarget.setAttribute('data-target', totalMonths);
 }
@@ -201,7 +201,7 @@ function spawnHeart() {
   if (!floatingContainer) return;
   const heart = document.createElement('span');
   heart.className = 'floating-heart';
-  heart.textContent = ['❤', '♥', '💕', '💗'][Math.floor(Math.random() * 4)];
+  heart.textContent = ['💙', '♥', '💕', '💗'][Math.floor(Math.random() * 4)];
   heart.style.left = Math.random() * 100 + '%';
   heart.style.fontSize = (14 + Math.random() * 18) + 'px';
   heart.style.animationDuration = (5 + Math.random() * 6) + 's';
@@ -256,7 +256,7 @@ function initHeartRain() {
     ctx.translate(h.x, h.y);
     ctx.rotate(h.rotation);
     ctx.globalAlpha = h.opacity;
-    ctx.fillStyle = `hsl(${350 + Math.random() * 15}, ${60 + Math.random() * 20}%, ${55 + Math.random() * 15}%)`;
+    ctx.fillStyle = `hsl(${200 + Math.random() * 20}, ${50 + Math.random() * 25}%, ${55 + Math.random() * 20}%)`;
     ctx.beginPath();
     const s = h.size;
     ctx.moveTo(0, s * 0.3);
@@ -299,7 +299,7 @@ function initHeartRain() {
     p.style.fontSize = (10 + Math.random() * 14) + 'px';
     p.style.animationDuration = (6 + Math.random() * 8) + 's';
     p.style.animationDelay = Math.random() * 6 + 's';
-    p.style.color = Math.random() > 0.5 ? '#d4736e' : '#c9a96e';
+    p.style.color = Math.random() > 0.5 ? '#6ba3be' : '#c9a96e';
     container.appendChild(p);
   }
 })();
